@@ -71,4 +71,75 @@
 ```
 # questao7
 ```java
+        Scanner ler = new Scanner(System.in);
+        int[] nota = new int[10];
+        int x, soma = 0, media;
+        for (x = 0; x < nota.length; x++) {
+            System.out.println("Digite a nota "+(x + 1)+":");
+            nota[x] = ler.nextInt();
+            soma += nota[x];
         }
+        media = soma / nota.length;
+        System.out.println("\nMédia das notas: "+media);
+        System.out.println("As notas maiores que a média é");
+        for (x = 0; x < nota.length; x++) {
+            if (nota[x] > media) {
+                System.out.println("nota "+(x + 1)+": "+nota[x]);
+```
+# questao8
+```java
+        int[] vetor = {7, 9, 10, 14, 23, 23, 1, 15, 16, 2};
+        int contador = 0;
+        int x = 0;
+        while (x < 10) {
+            if (vetor[x] == 5) {
+                contador++;
+            }
+            x++;
+        }
+        System.out.println("O número 5 aparece "+ contador +" vezes no vetor.");
+```
+# questao9
+```java
+        int[] vetor = {7, 9, 10, 14, 23, 23, 1, 15, 16, 2};
+        int[] multiplos = new int[10];
+        int x = 0;
+        int y = 0;
+        int c = 0;
+
+        while (x < 10) {
+            if (vetor[x] % 3 == 0) {
+                multiplos[y] = vetor[x];
+                y++;
+            }
+            x++;
+        }
+
+        System.out.println("Valores múltiplos de 3:");
+        x = 0;
+        while (x < y) {
+            System.out.println(multiplos[x]);
+            x++;
+```
+# questao10
+```java
+        int[] A = {1, 8, 19, 9, 17, 4, 7, 11, 3, 0};
+        int[] B = {7, 9, 10, 14, 23, 23, 1, 15, 16, 2};
+        int[] C = new int[10];
+        int i = 0;
+
+        while (i < 10) {
+            if (A[i] > B[i]) {
+                C[i] = A[i];
+            } else {
+                C[i] = B[i];
+            }
+            i++;
+        }
+
+        System.out.println("Vetor C com os maiores valores entre A e B: ");
+        i = 0;
+        while (i < 10) {
+            System.out.println(C[i]);
+            i++;
+```
